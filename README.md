@@ -20,7 +20,7 @@ Criação de um sistema de visualização de imagens.
 - Usar Javascript/Typescript, C# ou Java para criação da API seguindo o padrão REST.
 - Usar o MySql, SQL Server ou SQLite para persistência dos dados.
 
-## Bonus
+## Bônus
 - Criar dockerfile para os projetos.
 
 ## Links
