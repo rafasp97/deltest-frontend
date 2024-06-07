@@ -12,18 +12,11 @@ Criação de um sistema de visualização de imagens.
 - Deve ser possível remover uma imagem de favoritas.
 - Descrever como rodar o projeto (Leve em consideração que não tenho nenhuma ferramenta instalada).
 - Ser entregue em até 7 dias a partir da data de recebimento deste teste.
-- Deve ser aberto Pull Request do projeto para este repositório.
-- Criar uma api para consumir a api de imagens e realizar as operações de CRUD.
+- Consumir alguma api de imagens. Sugestões: Giphy, Imgur, Tenor.
 
 ## Tecnologias
 - Usar Vue ou React no front-end.
-- Usar Javascript/Typescript, C# ou Java para criação da API seguindo o padrão REST.
-- Usar o MySql, SQL Server ou SQLite para persistência dos dados.
 
 ## Bônus
 - Criar dockerfile para os projetos.
-
-## Links
-Site de imagens: https://giphy.com
-
-Documentação da api: https://developers.giphy.com/docs/api/#quick-start-guide
+- Criar um backend para a funcionalidade de favoritar imagens.
