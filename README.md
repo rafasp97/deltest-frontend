@@ -11,7 +11,6 @@ Criação de um sistema de visualização de imagens.
 - Deve ser possível visualizar imagens favoritadas.
 - Deve ser possível remover uma imagem de favoritas.
 - Descrever como rodar o projeto (Leve em consideração que não tenho nenhuma ferramenta instalada).
-- Ser entregue em até 7 dias a partir da data de recebimento deste teste.
 - Consumir alguma api de imagens. Sugestões: Giphy, Imgur, Tenor.
 
 ## Tecnologias
