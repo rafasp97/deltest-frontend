@@ -12,7 +12,7 @@ Criação de um sistema de visualização de imagens.
 - Deve ser possível remover uma imagem de favoritas.
 - Descrever como rodar o projeto (Leve em consideração que não tenho nenhuma ferramenta instalada).
 - Consumir alguma api de imagens. Sugestões: Giphy, Imgur, Tenor.
-- Deve ter commits de maneira que posso validar o gitFlow.
+- Deve ter commits de maneira que possa ser possível validar o gitFlow.
 
 ## Tecnologias
 - Usar Angular, Vue ou React no front-end.
