@@ -21,4 +21,4 @@ Criação de um sistema de visualização de imagens.
 - Criar dockerfile para os projetos.
 - Criar um backend para a funcionalidade de favoritar imagens.
 - Deploy do sistema.
-- Entrega antes do prazo 23:59 06/08/2025 .
+- Entrega antes do prazo 23:59 06/01/2025 .
