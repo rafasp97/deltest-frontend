@@ -5,7 +5,7 @@ import './Logo.css';
 import { useMode } from '../../context/DarkModeContext';
 
 // Framer Motion
-import { motion, motionValue } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Logo = () => {
 
