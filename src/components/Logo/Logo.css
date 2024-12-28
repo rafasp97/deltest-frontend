@@ -1,0 +1,66 @@
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Caveat", serif;
+    user-select: none; 
+    pointer-events: none;
+}
+
+.logo h1{
+    font-weight: bold;
+    position: relative;
+    bottom: 1.7em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.logo .icon-cd-1,
+.logo .icon-cd-2,
+.logo .icon-cd-3,
+.logo .icon-cd-4,
+.logo .icon-cd-5{
+    position: relative;
+}
+
+.icon-1{
+    bottom: 3.5em;
+    width: 10em;
+    position: relative;
+}
+
+.icon-2{
+    width: 8em;
+    position: relative;
+    position: relative;
+}
+
+.icon-cd-1{
+    width: 2.3em;
+    top: 2em;
+    right: 0.4em;
+}
+
+.icon-cd-2{
+    width: 1.7em;
+    top: 3em;
+    left: 1.5em;
+}
+
+.icon-cd-3{
+    width: 2.3em;
+    top: 3.6em;
+    right: 0.5em;
+}
+
+.icon-cd-4{
+    width: 2em;
+    top: 5.3em;
+    left: 2.5em;
+}
+
+.icon-cd-5{
+    width: 1.5em;
+    top: 5.7em;
+    left: 1em;
+    width: 1.5em;
+}
+
