@@ -1,4 +1,4 @@
-.homePage{
+.galleryPage {
     background-image: url('./bg/1.jpg');
     background-size: cover;
     background-position: center;
@@ -9,7 +9,8 @@
     color: var(--black-dark);
 }
 
-.container{
+.galleryContainer{
+    width: 40em;
     height: 30em;
     border: solid var(--white-light) 2px;
     border-radius: 20px;
@@ -20,29 +21,16 @@
     align-items: center;
     justify-content: top;
     flex-direction: column;
-    
 }
 
+
 /* Dark Mode */
-.homePage-dark{
+.galleryPage-dark{
     background-image: url('./bg/2.jpg');
     color: var(--white-light) !important ;
 }
-.container-dark{
+
+.galleryContainer-dark{
     border: solid var(--black-dark) 2px !important;
     background: rgba(34, 33, 39, 0.40) !important;
-}
-
-/* Responsividade */
-@media (min-width: 320px){
-    .container{
-        width: 17em;
-    }
-}
-
-@media (min-width: 425px){
-    .container{
-        width: 22em;
-        height: 32em;
-    }
 }
