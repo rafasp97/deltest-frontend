@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# 🖼️ **Image Gallery**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Descrição**:  
+A **Image Gallery** é um projeto desenvolvido com **React** para criar uma galeria de imagens interativa e animada. O design foi feito no **Figma** e a aplicação utiliza o **React Router** para navegação, o **Framer Motion** para animações suaves, e consome a Unsplash Image API para exibir e manipular as imagens.
 
-## Available Scripts
+**Protótipo no Figma**:  
+[Link para o protótipo no Figma](https://www.figma.com/design/VqeU0kOCtVtchpup6PaA7u/DelTech-Test?node-id=0-1&t=niyhi682DCULWRMB-1)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🌟 **Exibição de imagens**: Exibe imagens dinâmicas em uma galeria.
+- 🔍 **Busca por imagens**: Permite buscar imagens digitando em um campo de entrada (input).
+- ⚡ **Responsividade**: O layout é adaptável para diferentes tamanhos de tela (desktop, tablet, mobile).
+- 🎨 **Limite de resultados**: A cada consulta, até 20 imagens são exibidas.
+- ⭐ **Favoritar imagens**: É possível favoritar imagens ao clicar em um ícone de favorito.
+- 💖 **Visualizar imagens favoritas**: Uma seção separada para exibir as imagens que foram marcadas como favoritas.
+- ❌ **Remover imagens de favoritas**: As imagens podem ser removidas da lista de favoritas a qualquer momento.
+- 📡 **Consumo de API**: O sistema consome uma API para visualização e manipulação de imagens.
+  
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologias
 
-### `npm test`
+- **React**: A biblioteca JavaScript usada para construir a interface do projeto.
+- **React Router**: Utilizado para navegação entre as diferentes páginas da galeria.
+- **Framer Motion**: Biblioteca para animações e transições fluidas nos componentes.
+- **Axios ou Fetch API**: Para consumir uma API externa de imagens.
+- **CSS (ou Styled Components)**: Responsividade e estilo da aplicação.
+- **Figma**: Ferramenta usada para criar o design e protótipo da interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📋 Como Rodar o Projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pré-requisitos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Antes de rodar o projeto, você precisa ter o [Node.js](https://nodejs.org/) instalado em sua máquina, pois ele é necessário para rodar o **npm** (Node Package Manager), que é utilizado para instalar as dependências do projeto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Passos para Rodar o Projeto
 
-### `npm run eject`
+1. **Instale o Node.js**:
+   
+   - Verifique se o Node.js está instalado rodando o comando:
+   
+     ```bash
+     node -v
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   - Caso não tenha o Node.js instalado, você pode baixá-lo e instalá-lo [aqui](https://nodejs.org/).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Clone o repositório**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/rafasp97/deltest-frontend.git
+   ```
+   
+3. **Instale as dependências**:
 
-## Learn More
+   - Execute o comando para instalar todas as dependências do projeto, incluindo o React Router e o Framer Motion, caso já estejam no arquivo package.json:
+   
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   - **Nota**: Se o React Router, Framer Motion e o Axios não estiverem listados nas dependências do projeto, você pode instalar separadamente com os seguintes comandos:
+     
+   ```bash
+   npm install react-router-dom
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm install framer-motion
+   ```
 
-### Code Splitting
+   ```bash
+   npm install axios
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Inicie o projeto**:
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm start
+   ```
+   
