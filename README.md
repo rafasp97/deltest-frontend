@@ -56,30 +56,39 @@ Antes de rodar o projeto, você precisa ter o [Node.js](https://nodejs.org/) ins
    ```bash
    git clone https://github.com/rafasp97/deltest-frontend.git
    ```
+
    
 3. **Instale as dependências**:
+   
 
    - Execute o comando para instalar todas as dependências do projeto, incluindo o React Router e o Framer Motion, caso já estejam no arquivo package.json:
+
    
    ```bash
    npm install
    ```
 
+
    - **Nota**: Se o React Router, Framer Motion e o Axios não estiverem listados nas dependências do projeto, você pode instalar separadamente com os seguintes comandos:
+
      
    ```bash
    npm install react-router-dom
    ```
 
+
    ```bash
    npm install framer-motion
    ```
+
 
    ```bash
    npm install axios
    ```
 
+
 5. **Inicie o projeto**:
+
 
    ```bash
    npm start
