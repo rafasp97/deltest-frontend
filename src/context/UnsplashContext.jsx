@@ -46,7 +46,7 @@ export const UnsplashProvider = ({ children }) => {
             } 
         catch (err) {
             console.error('Erro ao buscar imagens: ', err);
-            setError('Ocorreu um erro ao carregar as imagens. Tente novamente mais tarde.');
+            setError('Error: Unable to connect to server. Please try later!');
             setLoading(false);
         }
     };
@@ -75,7 +75,7 @@ export const UnsplashProvider = ({ children }) => {
         } 
         catch (err) {
             console.error('Erro ao buscar imagens por IDs: ', err);
-            setError('Ocorreu um erro ao carregar as imagens. Tente novamente mais tarde.');
+            setError('Error: Unable to connect to server. Please try later!');
             setLoading(false);
         }
     };

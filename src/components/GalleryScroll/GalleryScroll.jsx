@@ -22,7 +22,7 @@ const GalleryScroll = () => {
   const { mode } = useMode();
 
   // Utilização do contexto para recebimento das imagens e estado de carregamento
-  const { images, loading } = useContext(UnsplashContext);
+  const { images, loading, error } = useContext(UnsplashContext);
 
 
 /* 
@@ -46,6 +46,7 @@ const GalleryScroll = () => {
   return (
     <>
       {isFavoritePage && <h1 className='galleryScroll-h1'>Your favorites photos</h1>}
+      {error && <h1 className='galleryScroll-h1'>{error}</h1>}
       {loading ? (<h1 className='galleryScroll-h1'>Loading...</h1>) : (
           <div className={mode ? 'galleryScroll' : 'galleryScroll galleryScroll-dark'}>
             {images.map((image) => (

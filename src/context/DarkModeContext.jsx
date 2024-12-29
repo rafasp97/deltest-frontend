@@ -9,7 +9,7 @@ export const DarkModeProvider = ({ children }) => {
   // Recupera o valor do dark mode do localStorage, ou assume true como padrão
   const [mode, setMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
-    return savedMode ? JSON.parse(savedMode) : true; // Default to true (dark mode) if not found
+    return savedMode ? JSON.parse(savedMode) : true;
   });
 
   // Função para alternar o modo
