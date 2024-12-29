@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 //React Router
 import { useLocation} from 'react-router-dom';
 
 import './LikeHeart.css'; 
 
+import { UnsplashContext } from '../../context/UnsplashContext';
+
 const LikeHeart = ({ imageId }) => {
 
     const location = useLocation();
+
+    // Utilização do contexto
+    const { fetchImagesByIds } = useContext(UnsplashContext);
     
 
     const [isChecked, setIsChecked] = useState(() => {
@@ -26,7 +31,10 @@ const LikeHeart = ({ imageId }) => {
              // Desmarca o checkbox
             setIsChecked(false);
             if(location.pathname === '/favorites'){
-                window.location.reload();
+                //atualiza as imagens quando o click for removido na pagina favorites
+                const recImgs = JSON.parse(localStorage.getItem('ImgsFavs'));
+                fetchImagesByIds(recImgs);
+                localStorage.setItem('ImgsFavs', JSON.stringify(recImgs));
             } 
         }
         else {
