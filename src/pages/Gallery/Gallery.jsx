@@ -22,7 +22,7 @@ const Gallery = () => {
   const location = useLocation();
 
   // Troca do botão favoritos/Voltar
-  const [isFavorite, setIsFavorite] = useState(true);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const handleNavigate = () => {
     if (location.pathname === '/gallery'){
