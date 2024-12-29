@@ -46,6 +46,34 @@ export const UnsplashProvider = ({ children }) => {
     }
   };
 
+ // Função para buscar imagens a partir de um array de IDs
+ const fetchImagesByIds = async (ids) => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      // Cria uma lista para buscar pelo parâmetro ids = imgsFavs
+      const requests = ids.map(id => 
+        axios.get(`https://api.unsplash.com/photos/${id}`, {
+          params: { client_id: key },
+        })
+      );
+      
+      // Aguardar o retorno da API
+      const responses = await Promise.all(requests);
+
+      // Seleciona os dados retornados em uma variável
+      const imagesData = responses.map(response => response.data);
+      
+      setImages(imagesData);  // Atualiza o estado com as imagens
+      setLoading(false);
+    } catch (err) {
+      console.error('Erro ao buscar imagens por IDs: ', err);
+      setError('Ocorreu um erro ao carregar as imagens. Tente novamente mais tarde.');
+      setLoading(false);
+    }
+  };
+
   // Carregar as imagens quando o componente for montado
   useEffect(() => {
     fetchImages();
@@ -63,7 +91,15 @@ export const UnsplashProvider = ({ children }) => {
   };
 
   return (
-    <UnsplashContext.Provider value={{ images, loading, error, fetchImages, query, handleSearchChange, handleSearchSubmit }}>
+    <UnsplashContext.Provider value={{
+    images, 
+    loading, 
+    error, 
+    fetchImages, 
+    fetchImagesByIds,
+    query, 
+    handleSearchChange, 
+    handleSearchSubmit }}>
       {children}
     </UnsplashContext.Provider>
   );

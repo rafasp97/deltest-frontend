@@ -21,7 +21,7 @@ const Home = () => {
   const { mode } = useMode();
 
   // Utilização do contexto para acionar uma requisição na API
-  const { fetchImages, loading } = useContext(UnsplashContext);
+  const { fetchImages } = useContext(UnsplashContext);
 
   const changePage = () => {
     fetchImages();

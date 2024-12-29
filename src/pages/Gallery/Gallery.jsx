@@ -1,6 +1,9 @@
 import React, {useContext} from 'react'
-import { NavLink } from 'react-router-dom';
+
 import './Gallery.css'; 
+
+// React Router
+import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 
 // Context
 import { useMode } from '../../context/DarkModeContext';
@@ -11,6 +14,21 @@ import GalleryScroll from '../../components/GalleryScroll/GalleryScroll';
 
 
 const Gallery = () => {
+
+  // Utilização do useNavigate para alternar entre /gallery e /favorites
+  const navigate = useNavigate();
+
+  // Utilização do useLocation para condicional de navegação
+  const location = useLocation();
+
+  const handleNavigate = () => {
+    if (location.pathname === '/gallery'){
+      navigate('/favorites');
+    }
+    else{
+      navigate('/gallery');
+    }
+  };
 
   // Utilização do context para alternar o style
   const { mode } = useMode();
@@ -37,12 +55,15 @@ const Gallery = () => {
                   onChange={handleSearchChange}
                 />
                 <button type="submit" className={mode ? 'button-search' : 'button-search button-dark'}>
-                  <img src={mode ? '/images/search-1.png' : '/images/search-2.png' } className='icon-search'/>
+                  <img src={mode ? '/images/search-1.png' : '/images/search-2.png' } className='icon-search' alt='icon'/>
                 </button>
               </form>
-              <button className={mode ? 'button-fav' : 'button-fav button-fav-dark'}>
-                  Favorites
-                </button>
+              <button 
+                className={mode ? 'button-fav' : 'button-fav button-fav-dark'}
+                onClick={handleNavigate}
+              >
+                Favorites
+              </button>
             </div>
             <GalleryScroll/>
         </div>
