@@ -3,7 +3,8 @@ import axios from 'axios';
 
 // Chave de acesso para o perfil na API Unsplash
 const key = '034-qhq7NjBWQhXUBGnNX_ACwdrqsG5RwQwynSVTZ08';
-const url = 'https://api.unsplash.com/photos'
+const url = 'https://api.unsplash.com/photos';
+const searchUrl = 'https://api.unsplash.com/search/photos';
 
 // Criação do contexto
 export const UnsplashContext = createContext();
@@ -13,18 +14,30 @@ export const UnsplashProvider = ({ children }) => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [query, setQuery] = useState('');  // filtro de pesquisa
 
   // Função para buscar as imagens
-  const fetchImages = async () => {
+  const fetchImages = async (searchQuery = '') => {
+    setLoading(true);
+    setError(null);
+    const requestUrl = searchQuery ? searchUrl : url;
+    const params = {
+      client_id: key,
+      per_page: 21,
+      page: Math.floor(Math.random() * 100) + 1,
+    };
+
+    if (searchQuery) {
+        params.query = searchQuery;  // Se houver um filtro, adicionar o parâmetro de busca
+    }
+
     try {
-      const response = await axios.get(url, {
-        params: {
-          client_id: key,
-          per_page: 21,
-          page: Math.floor(Math.random() * 100) + 1,
-        },
-      });
-      setImages(response.data);
+      const response = await axios.get( requestUrl,{params});
+      if (searchQuery) {
+        setImages(response.data.results);  // Para a busca, armazenar os resultados
+      } else {
+        setImages(response.data);  // Para a busca sem filtro, armazenar as imagens
+      }
       setLoading(false);
     } catch (err) {
       console.error('Erro ao buscar imagens: ', err);
@@ -38,8 +51,19 @@ export const UnsplashProvider = ({ children }) => {
     fetchImages();
   }, []);
 
+ // Função para atualizar o estado da pesquisa
+ const handleSearchChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+// Função para realizar a pesquisa quando o formulário for enviado
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    fetchImages(query); // Inicia a busca com o termo fornecido
+  };
+
   return (
-    <UnsplashContext.Provider value={{ images, loading, error, fetchImages}}>
+    <UnsplashContext.Provider value={{ images, loading, error, fetchImages, query, handleSearchChange, handleSearchSubmit }}>
       {children}
     </UnsplashContext.Provider>
   );

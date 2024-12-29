@@ -16,12 +16,16 @@ const GalleryScroll = () => {
 
   const { images, loading, error } = useContext(UnsplashContext);
 
+  const getImageId = (imageId) => {
+    console.log(imageId);
+  }
+
   return (
     <>
       {loading ? (<Loading/>) : (
         <div className={mode ? 'galleryScroll' : 'galleryScroll galleryScroll-dark'}>
           {images.map((image) => (
-            <div key={image.id} className="item-scroll">
+            <div key={image.id} className="item-scroll" onClick={() => getImageId(image.id)}>
               <img 
                 src={image.urls.small} 
                 alt={image.alt_description}
