@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 
 import './Gallery.css'; 
 
@@ -21,12 +21,17 @@ const Gallery = () => {
   // Utilização do useLocation para condicional de navegação
   const location = useLocation();
 
+  // Troca do botão favoritos/Voltar
+  const [isFavorite, setIsFavorite] = useState(true);
+
   const handleNavigate = () => {
     if (location.pathname === '/gallery'){
       navigate('/favorites');
+      setIsFavorite(true);
     }
     else{
       navigate('/gallery');
+      setIsFavorite(false);
     }
   };
 
@@ -50,7 +55,7 @@ const Gallery = () => {
                 <input 
                   type="text" 
                   id="search" 
-                  placeholder="Search for photos..." 
+                  placeholder="search for photos..." 
                   value={query}
                   onChange={handleSearchChange}
                 />
@@ -62,7 +67,7 @@ const Gallery = () => {
                 className={mode ? 'button-fav' : 'button-fav button-fav-dark'}
                 onClick={handleNavigate}
               >
-                Favorites
+                {isFavorite ? 'back to gallery' : 'favorites'}
               </button>
             </div>
             <GalleryScroll/>
