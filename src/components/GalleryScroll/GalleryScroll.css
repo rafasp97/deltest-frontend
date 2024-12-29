@@ -7,9 +7,10 @@
     scroll-behavior: smooth;
     gap: 1em;
     margin: 0.5em 0em;
-    padding: 7px;
-    scrollbar-color: var(--white-light) var(--black-dark);
+    padding: 5px;
+    scrollbar-color:var(--black-dark) transparent;
 }
+
 
 .galleryScroll-h1{
      font-family: "Space Grotesk", serif !important;
@@ -40,7 +41,7 @@
 
 /* Dark Mode */
 .galleryScroll-dark{
-    scrollbar-color: var(--black-dark) var(--white-light);
+    scrollbar-color:var(--white-light) transparent;
 }
 
 
