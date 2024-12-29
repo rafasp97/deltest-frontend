@@ -5,6 +5,9 @@ import './GalleryScroll.css';
 // React Router
 import { useLocation } from 'react-router-dom';
 
+// Components
+import LikeHeart  from '../LikeHeart/LikeHeart'
+
 
 // Context
 import { useMode } from '../../context/DarkModeContext';
@@ -39,24 +42,6 @@ const GalleryScroll = () => {
   }, []);
 
 
-  // Função para manipular os dados no localStorage
-  const manipulateStorage = (imageId) => {
-    const recImgs = JSON.parse(localStorage.getItem('ImgsFavs'));
-    if(recImgs.includes(imageId)){
-      // Se o ID estiver incluso, ele remove.
-      const updatedImgs = recImgs.filter(img => img !== imageId);
-      // Armazena o novo array no localStorage
-      localStorage.setItem('ImgsFavs', JSON.stringify(updatedImgs));
-
-    }
-    else {
-      //  Se não estiver em imgsFavs, adiciona imageId
-      const updatedImgs = [...recImgs, imageId];
-      // Armazena o novo array no localStorage
-      localStorage.setItem('ImgsFavs', JSON.stringify(updatedImgs));
-    }
-  }
-
 
   return (
     <>
@@ -64,12 +49,13 @@ const GalleryScroll = () => {
       {loading ? (<h1 className='galleryScroll-h1'>Loading...</h1>) : (
           <div className={mode ? 'galleryScroll' : 'galleryScroll galleryScroll-dark'}>
             {images.map((image) => (
-              <div key={image.id} className="item-scroll" onClick={() => manipulateStorage(image.id)}>
+              <div key={image.id} className="item-scroll">
                 <img 
                   src={image.urls.small} 
                   alt={image.alt_description}
                   className={mode ? 'img-scroll' : 'img-scroll img-scroll-dark'}
                 />
+                <LikeHeart imageId={image.id}/>
               </div>
             ))}
           </div>

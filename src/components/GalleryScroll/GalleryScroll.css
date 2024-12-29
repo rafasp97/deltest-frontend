@@ -20,6 +20,8 @@
 .item-scroll{
     display: flex;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .img-scroll{
