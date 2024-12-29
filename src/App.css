@@ -52,3 +52,8 @@ button:active{
   color: var(--white-light);
   background: var(--black-dark);
 }
+
+input:focus {
+  border: none; 
+  outline: none; 
+}
