@@ -102,6 +102,11 @@
     border: none;
 }
 
+.title {
+    text-decoration: none;
+    color: var(--black-dark);
+}
+
 /* Dark Mode */
 .galleryPage-dark{
     background-image: url('./bg/2.jpg');
@@ -119,6 +124,10 @@
 }
 .button-fav-dark:active{
     background-color: var(--black-dark);
+    color: var(--white-light);
+}
+
+.title-dark{
     color: var(--white-light);
 }
 

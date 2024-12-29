@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom';
 import './Gallery.css'; 
 
 // Context
@@ -17,10 +17,12 @@ const Gallery = () => {
   return (
     <div className={mode ? 'galleryPage' : 'galleryPage galleryPage-dark'}>
         <div className={mode ? 'galleryContainer' : ' galleryContainer galleryContainer-dark'}>
-            <h1>ImageGallery</h1>
+            <NavLink to={'/'} className={mode ? 'title' : 'title title-dark'}>
+              <h1>Image Gallery</h1>
+            </NavLink>
             <div className="search-favorites">
               <div className={mode ? 'search-container' : 'search-container search-container-dark'}>
-                <input type="text" id="search" placeholder="Search for photos and illustrations..." />
+                <input type="text" id="search" placeholder="Search for photos..." />
                 <button className={mode ? 'button-search' : 'button-search button-dark'}>
                   <img src={mode ? '/images/search-1.png' : '/images/search-2.png' } className='icon-search'/>
                 </button>
