@@ -5,8 +5,6 @@ import './GalleryScroll.css';
 // React Router
 import { useLocation } from 'react-router-dom';
 
-// Components
-import Loading from '../Loading/Loading';
 
 // Context
 import { useMode } from '../../context/DarkModeContext';
@@ -14,15 +12,15 @@ import { UnsplashContext } from '../../context/UnsplashContext';
 
 const GalleryScroll = () => {
 
+  const location = useLocation();
+  const isFavoritePage = location.pathname === '/favorites' // retorna true ou false
+
   // Utilização do context para alternar o style
   const { mode } = useMode();
 
   // Utilização do contexto para recebimento das imagens e estado de carregamento
   const { images, loading } = useContext(UnsplashContext);
 
-  // Verifica se o caminho é '/gallery'. Retorna true ou false.
-  const location = useLocation();
-  const isGalleryPage = location.pathname === '/gallery';
 
 /* 
   Lógica BackEnd para favoritar imagens - LocalStorage
@@ -43,14 +41,13 @@ const GalleryScroll = () => {
 
   // Função para manipular os dados no localStorage
   const manipulateStorage = (imageId) => {
-
     const recImgs = JSON.parse(localStorage.getItem('ImgsFavs'));
-
     if(recImgs.includes(imageId)){
       // Se o ID estiver incluso, ele remove.
       const updatedImgs = recImgs.filter(img => img !== imageId);
       // Armazena o novo array no localStorage
       localStorage.setItem('ImgsFavs', JSON.stringify(updatedImgs));
+
     }
     else {
       //  Se não estiver em imgsFavs, adiciona imageId
@@ -63,8 +60,8 @@ const GalleryScroll = () => {
 
   return (
     <>
-      {loading ? (<Loading/>) : (
-        isGalleryPage ? (
+      {isFavoritePage && <h1 className='galleryScroll-h1'>Your favorites photos</h1>}
+      {loading ? (<h1 className='galleryScroll-h1'>Loading...</h1>) : (
           <div className={mode ? 'galleryScroll' : 'galleryScroll galleryScroll-dark'}>
             {images.map((image) => (
               <div key={image.id} className="item-scroll" onClick={() => manipulateStorage(image.id)}>
@@ -76,13 +73,9 @@ const GalleryScroll = () => {
               </div>
             ))}
           </div>
-        ) : (
-          <div>Imagens favoritas</div>
-        )
 
       )}
     </>
-  
   )
 }
 

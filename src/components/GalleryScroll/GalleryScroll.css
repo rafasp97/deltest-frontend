@@ -11,6 +11,12 @@
     scrollbar-color: var(--white-light) var(--black-dark);
 }
 
+.galleryScroll-h1{
+     font-family: "Space Grotesk", serif !important;
+     font-size: 1em;
+     font-weight: 500;
+}
+
 .item-scroll{
     display: flex;
     cursor: pointer;

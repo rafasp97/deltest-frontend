@@ -1,9 +1,0 @@
-.loading{
-    font-family: "Space Grotesk", serif;
-    font-weight: 600;
-    color: var(--black-dark);
-}
-
-.loading-dark{
-    color: var(--white-light);
-}
