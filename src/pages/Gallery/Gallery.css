@@ -26,6 +26,7 @@
     justify-content: top;
     flex-direction: column;
     padding: 1em;
+    margin-top: 5em;
 }
 
 .search-favorites{
@@ -153,6 +154,7 @@
         border-radius: 0px;
         border-top: none !important;
         border-bottom: none !important;
+        margin-top: 0em;
     }
     .search-container{
         width: 30em;
