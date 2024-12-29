@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Home.css'; 
 
 // React Router
@@ -9,6 +9,7 @@ import Logo from '../../components/Logo/Logo';
 
 // Context
 import { useMode } from '../../context/DarkModeContext';
+import { UnsplashContext } from '../../context/UnsplashContext';
 
 const Home = () => {
 
@@ -19,7 +20,11 @@ const Home = () => {
   // Utilização do context para alternar o style
   const { mode } = useMode();
 
+  // Utilização do contexto para acionar uma requisição na API
+  const { fetchImages, loading } = useContext(UnsplashContext);
+
   const changePage = () => {
+    fetchImages();
     navigate('/gallery');
   }
 

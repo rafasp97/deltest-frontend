@@ -39,7 +39,7 @@ export const UnsplashProvider = ({ children }) => {
   }, []);
 
   return (
-    <UnsplashContext.Provider value={{ images, loading, error }}>
+    <UnsplashContext.Provider value={{ images, loading, error, fetchImages}}>
       {children}
     </UnsplashContext.Provider>
   );
