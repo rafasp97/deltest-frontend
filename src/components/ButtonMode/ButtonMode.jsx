@@ -8,11 +8,11 @@ import { useMode } from '../../context/DarkModeContext';
 
 const ButtonMode = () => {
 
-  const { toggleMode } = useMode();
+  const { mode, toggleMode } = useMode();
 
   return (
     <>
-      <input type="checkbox" className="theme-checkbox" onClick={toggleMode}/>
+      <input type="checkbox" className="theme-checkbox" onClick={toggleMode} checked={!mode}/>
     </>
   )
 }
