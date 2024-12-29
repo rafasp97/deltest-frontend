@@ -39,7 +39,6 @@ const Gallery = () => {
                 <button type="submit" className={mode ? 'button-search' : 'button-search button-dark'}>
                   <img src={mode ? '/images/search-1.png' : '/images/search-2.png' } className='icon-search'/>
                 </button>
-
               </form>
               <button className={mode ? 'button-fav' : 'button-fav button-fav-dark'}>
                   Favorites

@@ -23,7 +23,7 @@ export const UnsplashProvider = ({ children }) => {
     const requestUrl = searchQuery ? searchUrl : url;
     const params = {
       client_id: key,
-      per_page: 21,
+      per_page: 20,
       page: Math.floor(Math.random() * 100) + 1,
     };
 
