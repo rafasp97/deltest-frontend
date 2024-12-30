@@ -6,6 +6,10 @@ A **Image Gallery** é um projeto desenvolvido com **React** para criar uma gale
 **Protótipo no Figma**:  
 [Link para o protótipo no Figma](https://www.figma.com/design/VqeU0kOCtVtchpup6PaA7u/DelTech-Test?node-id=0-1&t=niyhi682DCULWRMB-1)
 
+
+**Deploy no Vercel**:
+[Link do projeto finalizado](https://deltest-frontend.vercel.app/)
+
 ---
 
 ## 🚀 Funcionalidades
