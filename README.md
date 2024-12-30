@@ -1,7 +1,6 @@
 # 🖼️ **Image Gallery**
 
-**Descrição**:  
-A **Image Gallery** é um projeto desenvolvido com **React** para criar uma galeria de imagens interativa e animada. O design foi feito no **Figma** e a aplicação utiliza o **React Router** para navegação, o **Framer Motion** para animações suaves, e consome a Unsplash Image API para exibir e manipular as imagens.
+A **Image Gallery** é um projeto desenvolvido com **React** para criar uma galeria de imagens interativa e animada. O design foi feito no **Figma** e a aplicação utiliza o **React Router** para navegação, o **Framer Motion** para animações e consome a Unsplash Image API para exibir e manipular as imagens.
 
 **Protótipo no Figma**: [Link para o protótipo no Figma](https://www.figma.com/design/VqeU0kOCtVtchpup6PaA7u/DelTech-Test?node-id=0-1&t=niyhi682DCULWRMB-1)
 
@@ -15,7 +14,7 @@ A **Image Gallery** é um projeto desenvolvido com **React** para criar uma gale
 - 🌟 **Exibição de imagens**: Exibe imagens dinâmicas em uma galeria.
 - 🔍 **Busca por imagens**: Permite buscar imagens digitando em um campo de entrada (input).
 - ⚡ **Responsividade**: O layout é adaptável para diferentes tamanhos de tela (desktop, tablet, mobile).
-- 🎨 **Limite de resultados**: A cada consulta, até 20 imagens são exibidas.
+- 🎨 **Resultados**: A cada consulta, até 20 imagens são exibidas (como solicitado).
 - ⭐ **Favoritar imagens**: É possível favoritar imagens ao clicar em um ícone de favorito.
 - 💖 **Visualizar imagens favoritas**: Uma seção separada para exibir as imagens que foram marcadas como favoritas.
 - ❌ **Remover imagens de favoritas**: As imagens podem ser removidas da lista de favoritas a qualquer momento.
