@@ -3,12 +3,10 @@
 **Descrição**:  
 A **Image Gallery** é um projeto desenvolvido com **React** para criar uma galeria de imagens interativa e animada. O design foi feito no **Figma** e a aplicação utiliza o **React Router** para navegação, o **Framer Motion** para animações suaves, e consome a Unsplash Image API para exibir e manipular as imagens.
 
-**Protótipo no Figma**:  
-[Link para o protótipo no Figma](https://www.figma.com/design/VqeU0kOCtVtchpup6PaA7u/DelTech-Test?node-id=0-1&t=niyhi682DCULWRMB-1)
+**Protótipo no Figma**: [Link para o protótipo no Figma](https://www.figma.com/design/VqeU0kOCtVtchpup6PaA7u/DelTech-Test?node-id=0-1&t=niyhi682DCULWRMB-1)
 
 
-**Deploy no Vercel**:
-[Link do projeto finalizado](https://deltest-frontend.vercel.app/)
+**Deploy no Vercel**: [Link do projeto finalizado](https://deltest-frontend.vercel.app/)
 
 ---
 
